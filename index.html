@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma educativa de metodología 5S para almacenes y logística">
+  <title>5S en Acción | Almacén Seguro</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <a class="brand" href="#inicio">5S <span>EN ACCIÓN</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#metodologia">Las 5S</a>
+        <a href="#auditoria">Auditoría</a>
+        <a href="#riesgos">Riesgos</a>
+        <a href="#evaluacion">Evaluación</a>
+      </div>
+    </nav>
+    <div class="hero-content" id="inicio">
+      <p class="eyebrow">SEGURIDAD Y SALUD EN EL TRABAJO · CASO 5</p>
+      <h1>Un almacén organizado.<br><span>Un equipo más seguro.</span></h1>
+      <p>Aprende y aplica la metodología 5S para prevenir incidentes, mejorar el orden y cuidar a las personas en almacenes y operaciones logísticas.</p>
+      <a class="button button-light" href="#metodologia">Explorar el programa</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>5</strong><span>etapas</span></div>
+      <div><strong>12</strong><span>semanas de implementación propuesta</span></div>
+      <div><strong>1</strong><span>objetivo: prevenir</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro-grid">
+      <div>
+        <p class="eyebrow dark">¿POR QUÉ IMPORTA?</p>
+        <h2>La seguridad también empieza con el orden.</h2>
+        <p>En almacenes y centros de distribución, los materiales fuera de lugar, los derrames, las cargas inestables y las rutas bloqueadas pueden favorecer tropiezos, caídas, golpes y atropellos por equipos móviles.</p>
+        <p>La metodología 5S ayuda a establecer condiciones de trabajo más organizadas, visibles y sostenibles. Debe complementarse con la evaluación de riesgos, capacitación, mantenimiento y controles operacionales.</p>
+      </div>
+      <aside class="highlight-card">
+        <span class="big-icon">✓</span>
+        <h3>Regla crítica del almacén</h3>
+        <p>Mantén libres las vías de evacuación, pasillos peatonales, extintores, tableros eléctricos y accesos a equipos de emergencia.</p>
+      </aside>
+    </section>
+
+    <section class="section tinted" id="metodologia">
+      <p class="eyebrow dark">APRENDE LAS ETAPAS</p>
+      <h2>Las cinco S, en acciones concretas</h2>
+      <p class="section-lead">Selecciona cada etapa para conocer qué hacer en el almacén.</p>
+      <div class="five-grid">
+        <button class="s-card active" data-s="0"><b>01</b><strong>Seiri</strong><span>Clasificar</span></button>
+        <button class="s-card" data-s="1"><b>02</b><strong>Seiton</strong><span>Ordenar</span></button>
+        <button class="s-card" data-s="2"><b>03</b><strong>Seiso</strong><span>Limpiar</span></button>
+        <button class="s-card" data-s="3"><b>04</b><strong>Seiketsu</strong><span>Estandarizar</span></button>
+        <button class="s-card" data-s="4"><b>05</b><strong>Shitsuke</strong><span>Disciplinar</span></button>
+      </div>
+      <article class="detail-panel" id="sDetail" aria-live="polite">
+        <div class="detail-visual" aria-hidden="true"><span class="animated-symbol">📦</span><span class="visual-caption">SEPARAR</span></div>
+        <div class="detail-copy"><div class="detail-number">01</div><p class="eyebrow dark">SEIRI</p><h3>Clasificar</h3><p>Separar lo necesario de lo innecesario. Identificar materiales obsoletos, dañados o sin uso y gestionarlos mediante el procedimiento autorizado.</p><ul><li>Retirar obstáculos y materiales sin uso.</li><li>Identificar productos dañados o vencidos.</li><li>No desechar materiales sin autorización.</li></ul></div>
+      </article>
+    </section>
+
+    <section class="section" id="riesgos">
+      <p class="eyebrow dark">PREVENCIÓN EN EL ALMACÉN</p>
+      <h2>Condiciones que debemos controlar</h2>
+      <div class="risk-grid">
+        <article class="risk-card"><span>🚧</span><h3>Pasillos obstruidos</h3><p>Pueden dificultar el tránsito y la evacuación. Mantén las rutas demarcadas y despejadas.</p></article>
+        <article class="risk-card"><span>📦</span><h3>Cargas inestables</h3><p>Respeta límites de carga, apilamiento seguro y condiciones de estanterías.</p></article>
+        <article class="risk-card"><span>💧</span><h3>Derrames y residuos</h3><p>Señaliza, controla el acceso y aplica el procedimiento de limpieza correspondiente.</p></article>
+        <article class="risk-card"><span>🚜</span><h3>Equipos móviles</h3><p>Respeta rutas peatonales, zonas de circulación y reglas de operación de montacargas.</p></article>
+      </div>
+    </section>
+
+    <section class="section tinted" id="auditoria">
+      <p class="eyebrow dark">VERIFICACIÓN EN CAMPO</p>
+      <h2>Simulación de auditoría 5S</h2>
+      <p class="section-lead">Marca únicamente los criterios que se cumplen en la zona inspeccionada. Los criterios sin marcar requieren revisión.</p>
+      <div class="audit-box">
+        <div class="form-row">
+          <label>Zona inspeccionada<input id="zona" type="text" placeholder="Ej. Pasillo A, racks 1–4"></label>
+          <label>Responsable de la inspección<input id="responsable" type="text" placeholder="Nombre o cargo"></label>
+        </div>
+        <div id="auditList" class="audit-list"></div>
+        <div class="score-row"><div><span class="muted">Cumplimiento de criterios marcados</span><strong id="score">0%</strong></div><div class="progress"><span id="progressBar"></span></div></div>
+        <button class="button" id="saveAudit">Guardar registro en este dispositivo</button>
+        <p class="small-note" id="auditMessage" aria-live="polite">Este prototipo guarda los registros localmente en el navegador; no los envía al profesor ni a un servidor.</p>
+        <div id="auditHistory" class="history"></div>
+      </div>
+    </section>
+
+    <section class="section" id="reporte">
+      <p class="eyebrow dark">COMUNICACIÓN DE PELIGROS</p>
+      <h2>Registrar una condición insegura</h2>
+      <div class="report-box">
+        <label>Tipo de condición
+          <select id="hazardType">
+            <option>Pasillo o salida obstruida</option><option>Derrame o piso resbaladizo</option>
+            <option>Estantería o rack dañado</option><option>Carga inestable o mal apilada</option>
+            <option>Extintor o equipo de emergencia bloqueado</option><option>Residuos o materiales fuera de lugar</option><option>Otro</option>
+          </select>
+        </label>
+        <label>Ubicación<input id="hazardLocation" placeholder="Indica pasillo, zona o referencia"></label>
+        <label>Descripción<textarea id="hazardDescription" rows="4" placeholder="Describe lo observado, sin exponerte al peligro"></textarea></label>
+        <label>Prioridad<select id="hazardPriority"><option>Alta: riesgo inmediato</option><option>Media</option><option>Baja</option></select></label>
+        <button class="button" id="makeReport">Preparar reporte</button>
+        <textarea id="reportOutput" rows="6" readonly placeholder="Aquí aparecerá el reporte para copiarlo y enviarlo por el canal oficial."></textarea>
+        <button class="button button-outline" id="copyReport">Copiar reporte</button>
+        <p class="small-note">Ante peligro grave e inminente, aléjate, advierte a las personas expuestas y comunica la situación inmediatamente por el canal de emergencia o al supervisor. Este formulario es demostrativo y no reemplaza el canal oficial.</p>
+      </div>
+    </section>
+
+    <section class="section tinted" id="evaluacion">
+      <p class="eyebrow dark">PON A PRUEBA LO APRENDIDO</p>
+      <h2>Mini evaluación 5S</h2>
+      <p class="section-lead">Responde las cinco preguntas. Al finalizar verás tu resultado y la explicación.</p>
+      <div class="quiz-box">
+        <div class="quiz-top"><span id="questionCount">Pregunta 1 de 5</span><span id="quizScore"></span></div>
+        <h3 id="questionText"></h3>
+        <div id="answerOptions" class="answers"></div>
+        <p id="answerFeedback" aria-live="polite"></p>
+        <button class="button" id="nextQuestion" disabled>Siguiente</button>
+      </div>
+      <p class="small-note">También puedes enlazar aquí tu Kahoot para una actividad grupal en vivo.</p>
+    </section>
+
+    <section class="section">
+      <p class="eyebrow dark">ORGANIZACIÓN DEL PROGRAMA</p>
+      <h2>Plan de implementación propuesto</h2>
+      <div class="timeline">
+        <div><b>Semanas 1–2</b><span>Diagnóstico inicial y línea base.</span></div>
+        <div><b>Semanas 3–4</b><span>Seiri: clasificación de materiales.</span></div>
+        <div><b>Semanas 5–6</b><span>Seiton: orden, ubicaciones y señalización.</span></div>
+        <div><b>Semanas 7–8</b><span>Seiso: limpieza e inspección.</span></div>
+        <div><b>Semanas 9–10</b><span>Seiketsu: estándares y listas de verificación.</span></div>
+        <div><b>Semanas 11–12</b><span>Shitsuke: auditoría, capacitación y mejora continua.</span></div>
+      </div>
+      <p class="small-note">Cronograma académico referencial. La empresa debe ajustarlo a su evaluación de riesgos, recursos y operaciones.</p>
+    </section>
+
+    <section class="section indicators">
+      <p class="eyebrow">SEGUIMIENTO SOMA</p><h2>Indicadores propuestos</h2>
+      <div class="indicator-grid">
+        <div><span>COBERTURA</span><strong>≥ 95%</strong><p>Trabajadores capacitados ÷ trabajadores programados × 100.</p></div>
+        <div><span>EFICACIA</span><strong>≥ 90%</strong><p>Criterios conformes ÷ criterios evaluados × 100.</p></div>
+        <div><span>CIERRE DE HALLAZGOS</span><strong>≥ 90%</strong><p>Hallazgos cerrados dentro del plazo ÷ hallazgos con plazo cumplido × 100.</p></div>
+        <div><span>IMPACTO</span><strong>−20%</strong><p>Reducción propuesta de incidentes frente a la línea base, a seis meses.</p></div>
+      </div>
+      <p class="small-note">Las metas son propuestas para el ejercicio académico; deben validarse con datos reales y una línea base.</p>
+    </section>
+
+    <section class="section references">
+      <p class="eyebrow dark">MARCO DE REFERENCIA</p><h2>Normativa y referencias</h2>
+      <ol>
+        <li>Perú. Ley N.º 29783, Ley de Seguridad y Salud en el Trabajo.</li>
+        <li>Perú. Decreto Supremo N.º 005-2012-TR, Reglamento de la Ley de Seguridad y Salud en el Trabajo.</li>
+        <li>International Organization for Standardization. ISO 45001:2018. Occupational health and safety management systems — Requirements with guidance for use.</li>
+      </ol>
+      <p class="small-note">Verifica la versión vigente y los requisitos aplicables antes de utilizar este material como procedimiento oficial.</p>
+    </section>
+  </main>
+  <footer><strong>5S EN ACCIÓN · ALMACÉN SEGURO</strong><p>Material educativo de apoyo · Seguridad y Salud en el Trabajo</p></footer>
+  <script src="funciones.js"></script>
+</body>
+</html>
